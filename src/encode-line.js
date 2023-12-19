@@ -24,9 +24,9 @@ function encodeLine(str) {
   
   const arrayToString = arrayEncodingVersion.map((item) => {
     if (item.count > 1) {
-      return `${item.count + item.char}`;
+      return item.count + item.char;
     } else {
-      return `${item.char}`;
+      return item.char;
     }
   })
   
