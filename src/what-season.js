@@ -15,13 +15,13 @@ function getSeason(/* date */) {
   // if (date === undefined || date === null) {
   //   return 'Unable to determine the time of year!';
   // }
-
-  // if (!(date instanceof Date) || isNaN(date.getTime())) {
+  
+  // if (!(date instanceof Date) || (date === typeof 'object') || isNaN(date.getTime())) {
   //   throw new Error('Invalid date!');
   // }
 
   // const month = date.getMonth();
-  // if (month >= 2 && month <=4) {
+  // if (month >= 2 && month <= 4) {
   //   return 'spring';
   // } else if (month >= 5 && month <= 7) {
   //   return 'summer';
@@ -30,7 +30,6 @@ function getSeason(/* date */) {
   // } else {
   //   return 'winter';
   // }
-
   throw new NotImplementedError('Not implemented');
   // remove line with error and write your code here
 }
