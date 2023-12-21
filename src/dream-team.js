@@ -18,22 +18,11 @@ function createDreamTeam(members) {
     return false;
   }
 
-  const stringNames = members.filter((member) => typeof member === "string");
-
-  const clearNames = stringNames.map((name) => {
-    if (typeof name === 'string') {
-        return name.trim();
-    }
-    return '';
-  });
-
-  const firstLetters = clearNames.map((name) => {
-    return name[0].toUpperCase();
-  });
-
-  const finalString = firstLetters.sort().join("");
-
-  return finalString;
+  return members
+    .filter((member) => typeof member === "string")
+    .map(name => name.trim()[0].toUpperCase())
+    .sort()
+    .join("");
 }
 
 module.exports = {
